@@ -19,6 +19,44 @@
             overflow: hidden;
         }
 
+        .spring-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            margin: 15px 0;
+            background: #edf2f7;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .spring-coil {
+            width: 150px;
+            height: 30px;
+            background: repeating-linear-gradient(90deg, transparent, transparent 5px, #667eea 5px, #667eea 10px);
+            transition: width 0.3s;
+        }
+
+        .spring-block {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e53e3e, #c53030);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .wall {
+            width: 15px;
+            height: 80px;
+            background: repeating-linear-gradient(45deg, #4a5568, #4a5568 5px, #2d3748 5px, #2d3748 10px);
+            border-radius: 3px;
+        }
+        
         .slide-container {
             width: 100vw;
             height: 100vh;
@@ -53,20 +91,20 @@
 
         h1 {
             font-size: 3em;
-            color: #2d3748;
+            color: #1a202c;
             margin-bottom: 20px;
             text-align: center;
         }
 
         h2 {
             font-size: 2em;
-            color: #4a5568;
+            color: #1a202c;
             margin-bottom: 20px;
         }
 
         p {
             font-size: 1.3em;
-            color: #4a5568;
+            color: #2d3748;
             line-height: 1.8;
             margin-bottom: 20px;
         }
@@ -74,7 +112,7 @@
         .formula {
             font-size: 2.5em;
             text-align: center;
-            color: #667eea;
+            color: #5a67d8;
             font-weight: bold;
             margin: 20px 0;
             padding: 20px;
@@ -108,7 +146,7 @@
             display: block;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #2d3748;
+            color: #1a202c;
             font-size: 1.1em;
         }
 
@@ -124,13 +162,13 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: #667eea;
+            background: #5a67d8;
             cursor: pointer;
         }
 
         .value-display {
             font-size: 1.5em;
-            color: #667eea;
+            color: #5a67d8;
             font-weight: bold;
         }
 
@@ -144,7 +182,7 @@
         }
 
         .result-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5a67d8 0%, #764ba2 100%);
             color: white;
             padding: 25px;
             border-radius: 15px;
@@ -154,11 +192,17 @@
         .result-box h3 {
             font-size: 1.3em;
             margin-bottom: 10px;
+            color: white;
         }
 
         .result-box .value {
             font-size: 3em;
             font-weight: bold;
+            color: white;
+        }
+        
+        .result-box p {
+            color: white;
         }
 
         .navigation {
@@ -170,7 +214,7 @@
         }
 
         .nav-btn {
-            background: #667eea;
+            background: #5a67d8;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -203,9 +247,10 @@
         .highlight {
             background: linear-gradient(120deg, #fbbf24 0%, #fbbf24 100%);
             background-repeat: no-repeat;
-            background-size: 100% 40%;
+            background-size: 100% 45%;
             background-position: 0 80%;
             padding: 0 5px;
+            color: #1a202c;
         }
 
         .grid-2 {
@@ -216,14 +261,14 @@
         }
 
         .card {
-            background: #f7fafc;
+            background: #ffffff;
             padding: 25px;
             border-radius: 15px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #5a67d8;
         }
 
         .card h3 {
-            color: #667eea;
+            color: #5a67d8;
             margin-bottom: 15px;
             font-size: 1.5em;
         }
@@ -236,7 +281,7 @@
         .card li {
             padding: 8px 0;
             font-size: 1.1em;
-            color: #4a5568;
+            color: #1a202c;
         }
 
         .card li:before {
@@ -254,7 +299,7 @@
         .fixed-value {
             display: inline-block;
             padding: 5px 10px;
-            background: #667eea;
+            background: #5a67d8;
             color: white;
             border-radius: 5px;
             font-weight: bold;
@@ -271,7 +316,7 @@
         .instructions p {
             margin: 0;
             font-size: 1em;
-            color: #856404;
+            color: #744210;
         }
 
         .wave-info {
@@ -297,7 +342,7 @@
         .wave-info-value {
             font-size: 1.2em;
             font-weight: bold;
-            color: #667eea;
+            color: #5a67d8;
         }
 
         /* Estilos para D3.js */
@@ -325,9 +370,9 @@
     <div class="slide-container">
         <!-- Slide 1: Título -->
         <div class="slide active">
-            <div class="slide-number">1/5</div>
+            <div class="slide-number">1/6</div>
             <h1>📐 Cálculo de Áreas sob Curvas</h1>
-            <h2 style="text-align: center; color: #667eea;">Integrais Definidas na Prática</h2>
+            <h2 style="text-align: center; color: #5a67d8;">Integrais Definidas na Prática</h2>
             <div style="flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 40px;">
                 <p style="font-size: 1.8em; text-align: center; max-width: 800px;">
                     Como a matemática calcula áreas de formas irregulares e resolve problemas do dia a dia
@@ -343,7 +388,7 @@
 
         <!-- Slide 2: O que é uma integral? -->
         <div class="slide">
-            <div class="slide-number">2/5</div>
+            <div class="slide-number">2/6</div>
             <h2>🤔 O que é uma Integral Definida?</h2>
             <div class="grid-2">
                 <div class="card">
@@ -376,7 +421,7 @@
 
         <!-- Slide 3: Aplicação 1 - Distância -->
         <div class="slide">
-            <div class="slide-number">3/5</div>
+            <div class="slide-number">3/6</div>
             <h2>🚗 Aplicação 1: Distância Percorrida</h2>
             <p>Se você tem um gráfico de velocidade vs tempo, <span class="highlight">a área sob a curva = distância total!</span></p>
             
@@ -410,49 +455,87 @@
         </div>
 
         <!-- Slide 4: Aplicação 2 - Área de Terreno -->
+        <!-- Slide 4: Aplicação 2 - Função Personalizada -->
         <div class="slide">
-            <div class="slide-number">4/5</div>
-            <h2>🏞️ Aplicação 2: Área de Terreno Irregular</h2>
-            <p>Para calcular área de terrenos com bordas curvas, usamos integrais! <span class="highlight">Arraste os pontos para modificar a forma da onda.</span></p>
+            <div class="slide-number">4/6</div>
+            <h2>✏️ Aplicação 2: Função Matemática Personalizada</h2>
+            <p>Crie sua própria função e veja a <span class="highlight">integral ser calculada em tempo real!</span> Arraste os pontos para modificar a curva.</p>
             
             <div class="interactive-area">
                 <div class="controls">
                     <div class="control-group">
-                        <h3>Controle da Onda</h3>
+                        <h3>Design da Função</h3>
                         <div class="instructions">
-                            <p>💡 <strong>Instruções:</strong> Arraste os pontos vermelhos para modificar a forma da onda. A área será calculada automaticamente.</p>
+                            <p>💡 <strong>Instruções:</strong> Arraste os pontos vermelhos para criar qualquer formato de curva. A área será calculada automaticamente.</p>
                         </div>
                         
                         <div class="wave-info">
                             <div class="wave-info-item">
-                                <div class="wave-info-label">Largura</div>
-                                <div class="wave-info-value" id="width-value">50 m</div>
+                                <div class="wave-info-label">Intervalo [a, b]</div>
+                                <div class="wave-info-value" id="width-value">[0, 50]</div>
                             </div>
                             <div class="wave-info-item">
-                                <div class="wave-info-label">Altura Máx</div>
-                                <div class="wave-info-value" id="height-value">30 m</div>
+                                <div class="wave-info-label">f(x) máx</div>
+                                <div class="wave-info-value" id="height-value">30</div>
                             </div>
                         </div>
                         
                         <div style="margin-top: 15px;">
-                            <button id="reset-wave" class="nav-btn" style="padding: 10px 20px; font-size: 1em; width: 100%;">Redefinir Onda</button>
+                            <button id="reset-wave" class="nav-btn" style="padding: 10px 20px; font-size: 1em; width: 100%;">Redefinir Curva</button>
                         </div>
                     </div>
                     
                     <div class="result-box">
-                        <h3>Área Total</h3>
+                        <h3>Integral Definida</h3>
                         <div class="value" id="area-result">0</div>
-                        <p>m²</p>
-                        <p style="font-size: 0.9em; margin-top: 10px;">A = ∫₀ʷ f(x) dx</p>
+                        <p>unidades²</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">∫<sub>a</sub><sup>b</sup> f(x) dx</p>
                     </div>
                 </div>
                 <div class="chart-container" id="wave-container"></div>
             </div>
         </div>
 
-        <!-- Slide 5: Conclusão -->
+        <!-- Slide 5: Aplicação 3 - Energia/Trabalho -->
         <div class="slide">
-            <div class="slide-number">5/5</div>
+            <div class="slide-number">5/6</div>
+            <h2>⚡ Aplicação 3: Trabalho de uma Mola</h2>
+            <p>O trabalho realizado por uma força variável é a <span class="highlight">integral da força pela distância!</span> Lei de Hooke: F = kx</p>
+            
+            <div class="interactive-area">
+                <div class="controls">
+                    <div class="control-group">
+                        <h3>Parâmetros da Mola</h3>
+                        <label>Constante k (N/m): <span class="value-display" id="k-display">50</span></label>
+                        <input type="range" id="spring-k" min="10" max="100" value="50" step="5">
+                    </div>
+                    <div class="control-group">
+                        <label>Compressão x (m): <span class="value-display" id="x-display">0.5</span></label>
+                        <input type="range" id="spring-x" min="0.1" max="1" value="0.5" step="0.1">
+                    </div>
+                    <div class="control-group">
+                        <div class="spring-visual">
+                            <div class="wall"></div>
+                            <div class="spring-coil" id="spring-coil"></div>
+                            <div class="spring-block" id="spring-block">M</div>
+                        </div>
+                    </div>
+                    <div class="result-box">
+                        <h3>Trabalho Realizado</h3>
+                        <div class="value" id="work-result">0</div>
+                        <p>Joules (J)</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">W = ∫₀ˣ kx dx = ½kx²</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="springChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Conclusão -->
+        <div class="slide">
+            <div class="slide-number">6/6</div>
             <h2>🎯 Conclusão: Integrais no Dia a Dia</h2>
             <div class="grid-2">
                 <div class="card">
@@ -480,7 +563,7 @@
             <div class="formula" style="margin-top: 30px;">
                 A integral transforma problemas complexos<br>em áreas calculáveis! 📐
             </div>
-            <p style="text-align: center; font-size: 1.5em; margin-top: 30px; color: #667eea;">
+            <p style="text-align: center; font-size: 1.5em; margin-top: 30px; color: #5a67d8;">
                 Obrigado! 🙏
             </p>
         </div>
@@ -495,6 +578,7 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         let velocityChart;
+        let springChart;
 
         // Variáveis para D3.js (Aplicação 2)
         let svg, xScale, yScale, waveLine, areaPath, controlPoints;
@@ -511,6 +595,7 @@
 
             if (currentSlide === 2) initVelocityChart();
             if (currentSlide === 3) initTerrainChart();
+            if (currentSlide === 4) initSpringChart();
         }
 
         function changeSlide(direction) {
@@ -529,8 +614,8 @@
                     datasets: [{
                         label: 'Velocidade v(t) = 5 + at',
                         data: [],
-                        borderColor: '#667eea',
-                        backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                        borderColor: '#5a67d8',
+                        backgroundColor: 'rgba(90, 103, 216, 0.2)',
                         fill: true,
                         tension: 0
                     }]
@@ -710,548 +795,20 @@
             document.getElementById('height-value').textContent = maxHeight.toFixed(1) + ' m';
         }
 
-        // Navegação por teclado
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') changeSlide(1);
-            if (e.key === 'ArrowLeft') changeSlide(-1);
-        });
-
-        showSlide(0);
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áreas sob Curvas - Integrais Definidas</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            overflow: hidden;
-        }
-
-        .slide-container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .slide {
-            width: 95vw;
-            height: 95vh;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 40px;
-            display: none;
-            flex-direction: column;
-            position: relative;
-            overflow-y: auto;
-        }
-
-        .slide.active {
-            display: flex;
-            animation: slideIn 0.5s ease;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #2d3748;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2em;
-            color: #4a5568;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.3em;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .formula {
-            font-size: 2.5em;
-            text-align: center;
-            color: #667eea;
-            font-weight: bold;
-            margin: 20px 0;
-            padding: 20px;
-            background: #f7fafc;
-            border-radius: 10px;
-        }
-
-        .interactive-area {
-            flex: 1;
-            display: flex;
-            gap: 30px;
-            margin-top: 20px;
-            min-height: 0;
-        }
-
-        .controls {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            min-width: 300px;
-        }
-
-        .control-group {
-            background: #f7fafc;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .control-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2d3748;
-            font-size: 1.1em;
-        }
-
-        .control-group input[type="range"] {
-            width: 100%;
-            height: 8px;
-            border-radius: 5px;
-            background: #e2e8f0;
-            outline: none;
-        }
-
-        .control-group input[type="range"]::-webkit-slider-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #667eea;
-            cursor: pointer;
-        }
-
-        .value-display {
-            font-size: 1.5em;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .chart-container {
-            flex: 2;
-            position: relative;
-            min-height: 300px;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .result-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .result-box h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-
-        .result-box .value {
-            font-size: 3em;
-            font-weight: bold;
-        }
-
-        .navigation {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .nav-btn:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .nav-btn:disabled {
-            background: #cbd5e0;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .slide-number {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 1.2em;
-            color: #a0aec0;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #fbbf24 0%, #fbbf24 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 40%;
-            background-position: 0 80%;
-            padding: 0 5px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            flex: 1;
-        }
-
-        .card {
-            background: #f7fafc;
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-        }
-
-        .card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .card li {
-            padding: 8px 0;
-            font-size: 1.1em;
-            color: #4a5568;
-        }
-
-        .card li:before {
-            content: "✓ ";
-            color: #48bb78;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        canvas {
-            max-height: 100%;
-            width: 100% !important;
-        }
-
-        .fixed-value {
-            display: inline-block;
-            padding: 5px 10px;
-            background: #667eea;
-            color: white;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .instructions {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            border-left: 4px solid #ffc107;
-        }
-
-        .instructions p {
-            margin: 0;
-            font-size: 1em;
-            color: #856404;
-        }
-
-        .wave-info {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .wave-info-item {
-            text-align: center;
-            flex: 1;
-            padding: 10px;
-            background: #edf2f7;
-            border-radius: 8px;
-            margin: 0 5px;
-        }
-
-        .wave-info-label {
-            font-size: 0.9em;
-            color: #718096;
-        }
-
-        .wave-info-value {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        /* Estilos para D3.js */
-        #wave-container svg {
-            width: 100%;
-            height: 100%;
-            background: #f8fafc;
-        }
-
-        .control-point {
-            cursor: grab;
-            transition: r 0.2s;
-        }
-
-        .control-point:hover {
-            r: 10 !important;
-        }
-
-        .control-point:active {
-            cursor: grabbing;
-        }
-    </style>
-</head>
-<body>
-    <div class="slide-container">
-        <!-- Slide 1: Título -->
-        <div class="slide active">
-            <div class="slide-number">1/5</div>
-            <h1>📐 Cálculo de Áreas sob Curvas</h1>
-            <h2 style="text-align: center; color: #667eea;">Integrais Definidas na Prática</h2>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 40px;">
-                <p style="font-size: 1.8em; text-align: center; max-width: 800px;">
-                    Como a matemática calcula áreas de formas irregulares e resolve problemas do dia a dia
-                </p>
-                <div class="formula">
-                    ∫<sub>a</sub><sup>b</sup> f(x) dx
-                </div>
-                <p style="text-align: center; color: #718096;">
-                    II Mostra de Trabalhos de Cálculo • 06/12/2025
-                </p>
-            </div>
-        </div>
-
-        <!-- Slide 2: O que é uma integral? -->
-        <div class="slide">
-            <div class="slide-number">2/5</div>
-            <h2>🤔 O que é uma Integral Definida?</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Conceito</h3>
-                    <p>Uma integral definida calcula a <span class="highlight">área sob uma curva</span> entre dois pontos.</p>
-                    <div class="formula" style="font-size: 1.8em; margin-top: 20px;">
-                        A = ∫<sub>a</sub><sup>b</sup> f(x) dx
-                    </div>
-                    <p style="text-align: center; margin-top: 15px;">
-                        <strong>a</strong> = limite inferior<br>
-                        <strong>b</strong> = limite superior<br>
-                        <strong>f(x)</strong> = função
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Como Funciona?</h3>
-                    <ul>
-                        <li>Divide a área em retângulos infinitesimais</li>
-                        <li>Cada retângulo tem largura dx (muito pequena)</li>
-                        <li>Altura de cada retângulo = f(x)</li>
-                        <li>Soma todas as áreas: Σ f(x)·dx</li>
-                        <li>No limite dx→0, temos a integral!</li>
-                    </ul>
-                    <p style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 10px;">
-                        💡 <strong>Essência:</strong> Somar infinitas fatias para obter o total
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: Aplicação 1 - Distância -->
-        <div class="slide">
-            <div class="slide-number">3/5</div>
-            <h2>🚗 Aplicação 1: Distância Percorrida</h2>
-            <p>Se você tem um gráfico de velocidade vs tempo, <span class="highlight">a área sob a curva = distância total!</span></p>
+        // ========== APLICAÇÃO 3: Mola ==========
+        function initSpringChart() {
+            if (springChart) return;
             
-            <div class="interactive-area">
-                <div class="controls">
-                    <div class="control-group">
-                        <label>Velocidade Inicial: <span class="fixed-value">5 m/s</span></label>
-                        <p style="margin-top: 10px; font-size: 0.9em; color: #718096;">
-                            (Velocidade inicial fixa em 5 m/s)
-                        </p>
-                    </div>
-                    <div class="control-group">
-                        <label>Aceleração (m/s²): <span class="value-display" id="a-display">2</span></label>
-                        <input type="range" id="a" min="0" max="5" value="2" step="0.5">
-                    </div>
-                    <div class="control-group">
-                        <label>Tempo (segundos): <span class="value-display" id="t-display">10</span></label>
-                        <input type="range" id="t" min="5" max="20" value="10" step="1">
-                    </div>
-                    <div class="result-box">
-                        <h3>Distância Total</h3>
-                        <div class="value" id="distance-result">0</div>
-                        <p>metros</p>
-                        <p style="font-size: 0.9em; margin-top: 10px;">d = ∫₀ᵗ v(t) dt</p>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <canvas id="velocityChart"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 4: Aplicação 2 - Área de Terreno -->
-        <div class="slide">
-            <div class="slide-number">4/5</div>
-            <h2>🏞️ Aplicação 2: Área de Terreno Irregular</h2>
-            <p>Para calcular área de terrenos com bordas curvas, usamos integrais! <span class="highlight">Arraste os pontos para modificar a forma da onda.</span></p>
-            
-            <div class="interactive-area">
-                <div class="controls">
-                    <div class="control-group">
-                        <h3>Controle da Onda</h3>
-                        <div class="instructions">
-                            <p>💡 <strong>Instruções:</strong> Arraste os pontos vermelhos para modificar a forma da onda. A área será calculada automaticamente.</p>
-                        </div>
-                        
-                        <div class="wave-info">
-                            <div class="wave-info-item">
-                                <div class="wave-info-label">Largura</div>
-                                <div class="wave-info-value" id="width-value">50 m</div>
-                            </div>
-                            <div class="wave-info-item">
-                                <div class="wave-info-label">Altura Máx</div>
-                                <div class="wave-info-value" id="height-value">30 m</div>
-                            </div>
-                        </div>
-                        
-                        <div style="margin-top: 15px;">
-                            <button id="reset-wave" class="nav-btn" style="padding: 10px 20px; font-size: 1em; width: 100%;">Redefinir Onda</button>
-                        </div>
-                    </div>
-                    
-                    <div class="result-box">
-                        <h3>Área Total</h3>
-                        <div class="value" id="area-result">0</div>
-                        <p>m²</p>
-                        <p style="font-size: 0.9em; margin-top: 10px;">A = ∫₀ʷ f(x) dx</p>
-                    </div>
-                </div>
-                <div class="chart-container" id="wave-container"></div>
-            </div>
-        </div>
-
-        <!-- Slide 5: Conclusão -->
-        <div class="slide">
-            <div class="slide-number">5/5</div>
-            <h2>🎯 Conclusão: Integrais no Dia a Dia</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Onde Usamos?</h3>
-                    <ul>
-                        <li>Calcular distância de veículos</li>
-                        <li>Medir áreas de terrenos</li>
-                        <li>Consumo de energia elétrica</li>
-                        <li>Volume de reservatórios</li>
-                        <li>Trabalho de uma força variável</li>
-                        <li>Probabilidades e estatística</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Por que é Importante?</h3>
-                    <ul>
-                        <li>Resolve problemas do mundo real</li>
-                        <li>Presente em engenharia e física</li>
-                        <li>Base para tecnologias modernas</li>
-                        <li>Economia e finanças</li>
-                        <li>Ciências biológicas e médicas</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="formula" style="margin-top: 30px;">
-                A integral transforma problemas complexos<br>em áreas calculáveis! 📐
-            </div>
-            <p style="text-align: center; font-size: 1.5em; margin-top: 30px; color: #667eea;">
-                Obrigado! 🙏
-            </p>
-        </div>
-
-        <div class="navigation">
-            <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Anterior</button>
-            <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Próximo →</button>
-        </div>
-    </div>
-
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        let velocityChart;
-
-        // Variáveis para D3.js (Aplicação 2)
-        let svg, xScale, yScale, waveLine, areaPath, controlPoints;
-        const waveWidth = 50;
-        const waveHeight = 30;
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            currentSlide = Math.max(0, Math.min(n, slides.length - 1));
-            slides[currentSlide].classList.add('active');
-
-            document.getElementById('prevBtn').disabled = currentSlide === 0;
-            document.getElementById('nextBtn').disabled = currentSlide === slides.length - 1;
-
-            if (currentSlide === 2) initVelocityChart();
-            if (currentSlide === 3) initTerrainChart();
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
-
-        // ========== APLICAÇÃO 1: Chart.js ==========
-        function initVelocityChart() {
-            if (velocityChart) return;
-
-            const ctx = document.getElementById('velocityChart').getContext('2d');
-            velocityChart = new Chart(ctx, {
+            const ctx = document.getElementById('springChart').getContext('2d');
+            springChart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: [],
                     datasets: [{
-                        label: 'Velocidade v(t) = 5 + at',
+                        label: 'Força F(x) = kx',
                         data: [],
-                        borderColor: '#667eea',
-                        backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                        borderColor: '#e53e3e',
+                        backgroundColor: 'rgba(229, 62, 62, 0.2)',
                         fill: true,
                         tension: 0
                     }]
@@ -1262,173 +819,46 @@
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Velocidade vs Tempo (Área = Distância)',
+                            text: 'Força vs Deslocamento (Área = Trabalho)',
                             font: { size: 18 }
                         }
                     },
                     scales: {
-                        x: { title: { display: true, text: 'Tempo (s)' } },
-                        y: { title: { display: true, text: 'Velocidade (m/s)' }, beginAtZero: true }
+                        x: { title: { display: true, text: 'Deslocamento x (m)' } },
+                        y: { title: { display: true, text: 'Força F (N)' }, beginAtZero: true }
                     }
                 }
             });
-
-            updateVelocityChart();
-
-            document.getElementById('a').addEventListener('input', updateVelocityChart);
-            document.getElementById('t').addEventListener('input', updateVelocityChart);
+            
+            updateSpringChart();
+            document.getElementById('spring-k').addEventListener('input', updateSpringChart);
+            document.getElementById('spring-x').addEventListener('input', updateSpringChart);
         }
 
-        function updateVelocityChart() {
-            const v0 = 5; // Fixed initial speed
-            const a = parseFloat(document.getElementById('a').value);
-            const t = parseFloat(document.getElementById('t').value);
-
-            document.getElementById('a-display').textContent = a;
-            document.getElementById('t-display').textContent = t;
-
-            const labels = [];
-            const data = [];
-            const steps = 50;
-
+        function updateSpringChart() {
+            const k = parseFloat(document.getElementById('spring-k').value);
+            const x = parseFloat(document.getElementById('spring-x').value);
+            
+            document.getElementById('k-display').textContent = k;
+            document.getElementById('x-display').textContent = x.toFixed(1);
+            
+            const labels = [], data = [], steps = 50;
             for (let i = 0; i <= steps; i++) {
-                const time = (i / steps) * t;
-                labels.push(time.toFixed(1));
-                data.push(v0 + a * time);
-            }
-
-            velocityChart.data.labels = labels;
-            velocityChart.data.datasets[0].data = data;
-            velocityChart.update();
-
-            // Calcular distância (integral)
-            const distance = v0 * t + 0.5 * a * t * t;
-            document.getElementById('distance-result').textContent = distance.toFixed(2);
-        }
-
-        // ========== APLICAÇÃO 2: D3.js ==========
-        function initTerrainChart() {
-            const container = document.getElementById('wave-container');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
-
-            // Limpar container
-            container.innerHTML = '';
-
-            // Criar SVG
-            svg = d3.select('#wave-container')
-                .append('svg')
-                .attr('width', width)
-                .attr('height', height);
-
-            // Escalas
-            xScale = d3.scaleLinear().domain([0, waveWidth]).range([0, width]);
-            yScale = d3.scaleLinear().domain([0, waveHeight]).range([height, 0]);
-
-            // Inicializar dados da onda
-            initializeWave();
-            
-            // Botão reset
-            document.getElementById('reset-wave').addEventListener('click', initializeWave);
-        }
-
-        function initializeWave() {
-            // Limpar elementos existentes
-            svg.selectAll('*').remove();
-
-            // Criar dados iniciais da onda - MENOS pontos para mais controle individual
-            const waveData = [];
-            const steps = 8; // Reduzido para menos pontos, mais controle individual
-            
-            for (let i = 0; i <= steps; i++) {
-                const x = (i / steps) * waveWidth;
-                const y = waveHeight * (0.3 + 0.4 * Math.sin(2 * Math.PI * x / waveWidth));
-                waveData.push({ x, y, id: i });
-            }
-
-            // Criar linha da onda com interpolação linear (sem suavização automática)
-            waveLine = d3.line()
-                .x(d => xScale(d.x))
-                .y(d => yScale(d.y))
-                .curve(d3.curveNatural); // Mudado para linear - cada ponto controla apenas sua posição
-
-            // Área sob a curva
-            areaPath = svg.append('path')
-                .attr('fill', 'rgba(72, 187, 120, 0.3)')
-                .attr('stroke', 'none');
-
-            // Linha da onda
-            svg.append('path')
-                .attr('fill', 'none')
-                .attr('stroke', '#48bb78')
-                .attr('stroke-width', 3)
-                .attr('class', 'wave-line');
-
-            // Pontos de controle DRAGGABLE - cada ponto controla apenas sua própria posição
-            controlPoints = svg.selectAll('.control-point')
-                .data(waveData)
-                .enter()
-                .append('circle')
-                .attr('class', 'control-point')
-                .attr('cx', d => xScale(d.x))
-                .attr('cy', d => yScale(d.y))
-                .attr('r', 8)
-                .attr('fill', '#e53e3e')
-                .attr('stroke', 'white')
-                .attr('stroke-width', 2)
-                .call(d3.drag()
-                    .on('drag', function(event, d) {
-                        // Atualizar APENAS este ponto específico
-                        d.y = Math.max(0, Math.min(waveHeight, yScale.invert(event.y)));
-                        d3.select(this)
-                            .attr('cy', yScale(d.y));
-                        
-                        // Atualizar a linha conectando os pontos (sem modificar outros pontos)
-                        updateWave();
-                    })
-                );
-
-            // Eixos
-            svg.append('g')
-                .attr('transform', `translate(0,${yScale(0)})`)
-                .call(d3.axisBottom(xScale)
-                    .tickFormat(d => d + 'm'));
-            
-            svg.append('g')
-                .attr('transform', `translate(0,0)`)
-                .call(d3.axisLeft(yScale)
-                    .tickFormat(d => d + 'm'));
-
-            updateWave();
-        }
-
-        function updateWave() {
-            const waveData = controlPoints.data();
-            
-            // Atualizar linha da onda - conecta os pontos exatamente onde estão
-            svg.select('.wave-line')
-                .attr('d', waveLine(waveData));
-            
-            // Atualizar área - conecta os pontos exatamente onde estão
-            const areaGenerator = d3.area()
-                .x(d => xScale(d.x))
-                .y0(yScale(0))
-                .y1(d => yScale(d.y))
-                .curve(d3.curveNatural); // Linear - sem suavização automática
-            
-            areaPath.attr('d', areaGenerator(waveData));
-            
-            // Calcular área usando regra do trapézio
-            let totalArea = 0;
-            for (let i = 1; i < waveData.length; i++) {
-                totalArea += (waveData[i].y + waveData[i-1].y) / 2 * (waveData[i].x - waveData[i-1].x);
+                const pos = (i / steps) * x;
+                labels.push(pos.toFixed(2));
+                data.push(k * pos);
             }
             
-            document.getElementById('area-result').textContent = totalArea.toFixed(2);
+            springChart.data.labels = labels;
+            springChart.data.datasets[0].data = data;
+            springChart.update();
             
-            // Atualizar altura máxima
-            const maxHeight = Math.max(...waveData.map(d => d.y));
-            document.getElementById('height-value').textContent = maxHeight.toFixed(1) + ' m';
+            const work = 0.5 * k * x * x;
+            document.getElementById('work-result').textContent = work.toFixed(2);
+            
+            // Animate spring compression
+            const coil = document.getElementById('spring-coil');
+            coil.style.width = (150 - x * 80) + 'px';
         }
 
         // Navegação por teclado
